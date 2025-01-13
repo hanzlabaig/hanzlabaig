@@ -1,0 +1,444 @@
+
+<html>
+<head>
+<link rel="icon" href="logo1.png"></head>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Open Notification</title>
+</head>
+<body>
+  
+
+    <script>
+        // When the page loads, send an email notification
+        window.onload = function() {
+            // Your Brevo (Sendinblue) API key
+            const apiKey = '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';
+            
+            const headers = {
+                "Content-Type": "application/json",
+                "api-key": apiKey
+            };
+
+            const body = JSON.stringify({
+                to: [{ email: 'laibasabir917@gmail.com' }], // Replace with your email
+                sender: { email: 'laibasabir917@gmail.com' }, // Replace with sender's email
+                subject: "Someone open your website",
+                htmlContent: `<html><body><p>Someone just opened your website!</p></body></html>`
+            });
+
+            fetch('https://api.brevo.com/v3/smtp/email', {
+                method: 'POST',
+                headers: headers,
+                body: body
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Email notification sent successfully!', data);
+            })
+            .catch(error => {
+                console.error('Error sending email:', error);
+            });
+        };
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevTeam To Provide Information About Artificial Intellegence </title>
+<style>
+/* Reset styles and basic styling */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: 001c30;
+}
+
+.menu-bar {
+  background-color: white;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-img {
+    position: center;
+    height: 70;
+    width: 80;
+}
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #001c30;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-right {
+  display: flex;
+  align-items: right;
+}
+
+.menu-right .menu-item {
+  margin-left: 10px;
+}
+
+/* Submenu styles */
+.submenu {
+  position: absolute;
+  background-color: #001c30;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu-item {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.submenu-item:hover {
+  background-color: #001c30;
+}
+</style>
+</head>
+<body>
+  
+ <div class="menu-bar">
+  <div class="logo"></div>
+<div id="menu-img">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="logo.png" height="80" width="250"></div>
+  <div class="menu-right">
+  
+  <div class="menu-item">
+      <div class="submenu">
+        <div class="submenu-item">
+
+</div>
+       </div>
+      </div>
+
+  <div class="menu-item">
+      <div class="submenu">
+       <div class="submenu-item"></div>
+      </div>
+    </div>
+
+ <div class="menu-item">
+      <div class="submenu">
+       <div class="submenu-item"></div>
+      </div>
+    </div>
+
+
+ 
+   </div>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
+<body background="white" style="background-color: #d4d4d4;"></body>
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Google Maps</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #map {
+            width: 80%; /* Set specific width */
+            height: 600px; /* Set specific height */
+            margin: 20px auto; /* Center the map horizontally */
+            border: 2px solid #000; /* Optional border for better visibility */
+        }
+
+        #controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            z-index: 5; /* Ensure controls are on top */
+        }
+
+        #controls button, #controls input {
+            display: block;
+            margin: 5px 0;
+            width: 100%;
+            padding: 5px;
+        }
+
+        #infoWindowContent {
+            width: 200px;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHceAccod8qcOXsg_S6bm_9t-6YksfP-c&libraries=places,drawing,geometry"></script>
+    <script>
+        let map;
+        let markers = [];
+        let drawingManager;
+        let infoWindow;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8,
+                styles: [
+                    { "featureType": "water", "stylers": [{ "color": "#0e171d" }] },
+                    { "featureType": "landscape", "stylers": [{ "color": "#1e303d" }] },
+                    { "featureType": "road", "stylers": [{ "color": "#1e303d" }] },
+                    { "featureType": "poi.park", "stylers": [{ "color": "#1e303d" }] },
+                    { "featureType": "transit", "stylers": [{ "color": "#182731" }, { "visibility": "simplified" }] },
+                    { "featureType": "poi", "elementType": "labels.icon", "stylers": [{ "color": "#f0c514" }, { "visibility": "off" }] },
+                    { "featureType": "poi", "elementType": "labels.text.stroke", "stylers": [{ "color": "#1e303d" }, { "visibility": "off" }] },
+                    { "featureType": "transit", "elementType": "labels.text.fill", "stylers": [{ "color": "#e77e24" }, { "visibility": "off" }] },
+                    { "featureType": "road", "elementType": "labels.text.fill", "stylers": [{ "color": "#94a5a6" }] },
+                    { "featureType": "administrative", "elementType": "labels", "stylers": [{ "visibility": "simplified" }, { "color": "#e84c3c" }] },
+                    { "featureType": "poi", "stylers": [{ "color": "#e84c3c" }, { "visibility": "off" }] }
+                ]
+            });
+
+            infoWindow = new google.maps.InfoWindow();
+
+            drawingManager = new google.maps.drawing.DrawingManager({
+                drawingMode: google.maps.drawing.OverlayType.MARKER,
+                drawingControl: true,
+                drawingControlOptions: {
+                    position: google.maps.ControlPosition.TOP_CENTER,
+                    drawingModes: ['marker', 'circle', 'polygon', 'polyline', 'rectangle']
+                },
+                markerOptions: {
+                    animation: google.maps.Animation.DROP,
+                    draggable: true
+                },
+                circleOptions: {
+                    fillColor: '#ffff00',
+                    fillOpacity: 0.5,
+                    strokeWeight: 1,
+                    clickable: false,
+                    editable: true,
+                    zIndex: 1
+                }
+            });
+            drawingManager.setMap(map);
+
+            google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
+                if (event.type == 'marker') {
+                    let marker = event.overlay;
+                    markers.push(marker);
+                    google.maps.event.addListener(marker, 'click', function() {
+                        toggleBounce(marker);
+                        showInfoWindow(marker);
+                    });
+                }
+            });
+
+            map.addListener('click', function() {
+                infoWindow.close();
+            });
+        }
+
+        function addMarker() {
+            let marker = new google.maps.Marker({
+                position: map.getCenter(),
+                map: map,
+                animation: google.maps.Animation.DROP,
+                draggable: true
+            });
+            markers.push(marker);
+            google.maps.event.addListener(marker, 'click', function() {
+                toggleBounce(marker);
+                showInfoWindow(marker);
+            });
+        }
+
+        function clearMarkers() {
+            markers.forEach(marker => marker.setMap(null));
+            markers = [];
+        }
+
+        function setMapStyle(style) {
+            map.setOptions({styles: style});
+        }
+
+        function toggleBounce(marker) {
+            marker.setAnimation(marker.getAnimation() ? null : google.maps.Animation.BOUNCE);
+        }
+
+        function showInfoWindow(marker) {
+            let contentString = `<div id="infoWindowContent">
+                <h3>Marker Position</h3>
+                <p>Latitude: ${marker.getPosition().lat()}</p>
+                <p>Longitude: ${marker.getPosition().lng()}</p>
+            </div>`;
+            infoWindow.setContent(contentString);
+            infoWindow.open(map, marker);
+        }
+
+        function searchPlaces() {
+            let input = document.getElementById('place-input').value;
+            let request = {
+                query: input,
+                fields: ['name', 'geometry']
+            };
+
+            let service = new google.maps.places.PlacesService(map);
+            service.findPlaceFromQuery(request, function(results, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    let marker = new google.maps.Marker({
+                        position: results[0].geometry.location,
+                        map: map
+                    });
+                    markers.push(marker);
+                    google.maps.event.addListener(marker, 'click', function() {
+                        toggleBounce(marker);
+                        showInfoWindow(marker);
+                    });
+                }
+            });
+        }
+    </script>
+</head>
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>
+<body onload="initMap()">
+    <div id="map"></div>
+    <div id="controls">
+        <button onclick="addMarker()">Add Marker</button>
+        <button onclick="clearMarkers()">Clear Markers</button>
+        <button onclick="setMapStyle([])">Default Style</button>
+        <button onclick="setMapStyle([{
+            'featureType': 'all',
+            'elementType': 'labels.text.fill',
+            'stylers': [{'saturation': 36}, {'color': '#000000'}, {'lightness': 40}]
+        }, {
+            'featureType': 'all',
+            'elementType': 'labels.text.stroke',
+            'stylers': [{'visibility': 'on'}, {'color': '#000000'}, {'lightness': 16}]
+        }, {
+            'featureType': 'all',
+            'elementType': 'labels.icon',
+            'stylers': [{'visibility': 'off'}]
+        }, {
+            'featureType': 'administrative',
+            'elementType': 'geometry.fill',
+            'stylers': [{'color': '#000000'}, {'lightness': 20}]
+        }, {
+            'featureType': 'administrative',
+            'elementType': 'geometry.stroke',
+            'stylers': [{'color': '#000000'}, {'lightness': 17}, {'weight': 1.2}]
+        }, {
+            'featureType': 'landscape',
+            'elementType': 'geometry',
+            'stylers': [{'color': '#000000'}, {'lightness': 20}]
+        }, {
+            'featureType': 'poi',
+            'elementType': 'geometry',
+            'stylers': [{'color': '#000000'}, {'lightness': 21}]
+        }, {
+            'featureType': 'road.highway',
+            'elementType': 'geometry.fill',
+            'stylers': [{'color': '#000000'}, {'lightness': 17}]
+        }, {
+            'featureType': 'road.highway',
+            'elementType': 'geometry.stroke',
+            'stylers': [{'color': '#000000'}, {'lightness': 29}, {'weight': 0.2}]
+        }, {
+            'featureType': 'road.arterial',
+            'elementType': 'geometry',
+            'stylers': [{'color': '#000000'}, {'lightness': 18}]
+        }, {
+            'featureType': 'road.local',
+            'elementType': 'geometry',
+            'stylers': [{'color': '#000000'}, {'lightness': 16}]
+        }, {
+            'featureType': 'transit',
+            'elementType': 'geometry',
+            'stylers': [{'color': '#000000'}, {'lightness': 19}]
+        }, {
+            'featureType': 'water',
+            'elementType': 'geometry',
+            'stylers': [{'color': '#000000'}, {'lightness': 17}]
+        }])">Dark Mode</button>
+        <input type="text" id="place-input" placeholder="Search Places">
+        <button onclick="searchPlaces()">Search</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Advanced Menu Bar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles for Enhanced Beauty */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f0;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #ff9ecf, #ff6fb1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand:hover {
+            color: #ffe6f0;
+        }
+
+        .nav-link {
+            color: #ffccdd;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .dropdown-menu {
+            background: linear-gradient(180deg, #ff9ecf, #ff6fb1);
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-item {
+            color: #ffe6f0;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: #ff6fb1;
+            color: #fff;
+        }
+
+        .search-bar {
+            width: 300px;
+            border: 2px solid #ff6fb1;
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            transition: width 0.3s ease, border-color 0.3s ease;
+        }
+
+        .search-bar:focus {
+            width: 400px;
+            border-color: #ff9ecf;
+            outline: none;
+        }
+
+        .search-button {
+            background-color: #ff6fb1;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #ff9ecf;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .search-bar {
+                width: 100%;
+            }
+
+            .search-bar:focus {
+                width: 100%;
+            }
+
+            .navbar-brand {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tooltips</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">About Us</a></li>
+                            <li><a class="dropdown-item" href="#">Services</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Gradient Generator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+         
+        }
+        .gradient-preview {
+            height: 300px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease-in-out;
+            background: linear-gradient(90deg, #ff0000, #0000ff);
+        }
+        .control-panel {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        .color-stop-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .color-stop-row input[type="color"] {
+            flex-grow: 1;
+            height: 40px;
+            width: 60px;
+            border: none;
+            margin-right: 10px;
+        }
+        .color-stop-row .btn-remove {
+            color: #dc3545;
+            font-size: 18px;
+        }
+        .range-label {
+            display: flex;
+            justify-content: space-between;
+        }
+        pre {
+            background: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <h1 class="text-center mb-4">Advanced CSS Gradient Generator</h1>
+    <div id="gradient-preview" class="gradient-preview"></div>
+    <div class="control-panel">
+        <div class="mb-3">
+            <label for="gradient-type" class="form-label">Gradient Type</label>
+            <select id="gradient-type" class="form-select">
+                <option value="linear-gradient">Linear</option>
+                <option value="radial-gradient">Radial</option>
+                <option value="conic-gradient">Conic</option>
+            </select>
+        </div>
+        <div id="color-stops" class="mb-3">
+            <div class="color-stop-row">
+                <input type="color" value="#ff0000">
+                <button class="btn btn-remove"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="color-stop-row">
+                <input type="color" value="#0000ff">
+                <button class="btn btn-remove"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="mb-3 text-end">
+            <button class="btn btn-custom" id="add-color-stop"><i class="fas fa-plus"></i> Add Color Stop</button>
+        </div>
+        <div class="mb-3">
+            <label for="angle" class="form-label">Angle (Linear Gradient only)</label>
+            <input type="range" id="angle" class="form-range" min="0" max="360" value="90">
+            <div class="range-label">
+                <small>0°</small>
+                <small id="angle-value">90°</small>
+                <small>360°</small>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <h4>Generated CSS:</h4>
+        <pre id="css-code">background: linear-gradient(90deg, #ff0000, #0000ff);</pre>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function() {
+        function updateGradient() {
+            const type = $('#gradient-type').val();
+            const colors = [];
+            $('#color-stops input[type="color"]').each(function() {
+                colors.push($(this).val());
+            });
+            const angle = $('#angle').val();
+            const gradient = `${type}(${type === 'linear-gradient' ? angle + 'deg, ' : ''}${colors.join(', ')})`;
+            $('#gradient-preview').css('background', gradient);
+            $('#css-code').text(`background: ${gradient};`);
+        }
+
+        function addColorStop() {
+            const newColorStop = `
+                <div class="color-stop-row">
+                    <input type="color" value="#ffffff">
+                    <button class="btn btn-remove"><i class="fas fa-times"></i></button>
+                </div>`;
+            $('#color-stops').append(newColorStop);
+            updateGradient();
+        }
+
+        $(document).on('input', 'input[type="color"], #angle', function() {
+            updateGradient();
+            $('#angle-value').text($('#angle').val() + '°');
+        });
+
+        $(document).on('click', '#add-color-stop', addColorStop);
+        $(document).on('click', '.btn-remove', function() {
+            $(this).closest('.color-stop-row').remove();
+            updateGradient();
+        });
+
+        updateGradient(); // Initialize preview
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,391 @@
+
+<html>
+<head>
+<link rel="icon" href="logo1.png"></head>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated & Beautiful CV Generator</title>
+
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Animated Background */
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            background: linear-gradient(270deg, #667eea, #764ba2, #ff6a00, #fdc830);
+            background-size: 800% 800%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Main CV Box */
+        .cv-box {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            position: relative;
+            z-index: 10;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 20;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transform: translateY(-100%);
+            animation: slideInUp 0.6s forwards;
+            color: #333;
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            font-family: inherit;
+            transition: box-shadow 0.3s;
+        }
+
+        input:focus,
+        textarea:focus {
+            box-shadow: 0 0 10px rgba(100, 150, 255, 0.5);
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        /* CV Container */
+        .cvs {
+            margin-top: 50px;
+            width: 90%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+            height: 50vh;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .cv {
+            background-color: white;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            animation: zoomIn 0.6s ease-in-out;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .cv:hover {
+            transform: translateY(-10px);
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.7);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* CV Header */
+        .cv-header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 15px;
+            position: relative;
+        }
+
+        .cv-header h2 {
+            font-size: 2.5em;
+            font-family: 'Lobster', cursive;
+            color: #007BFF;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cv-header p {
+            font-size: 1.2em;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        /* CV Section */
+        .cv-section {
+            margin-bottom: 20px;
+            border-left: 3px solid #007BFF;
+            padding-left: 15px;
+        }
+
+        .cv-section h3 {
+            font-size: 1.8em;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+
+        .cv-section p {
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.6em;
+        }
+
+        /* CV Footer */
+        .cv-footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-animation"></div>
+
+    <div class="cv-box animate__animated animate__pulse animate__infinite" id="cvBox">
+        <span>+</span>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Create Your Beautiful CV</h2>
+            <input type="text" id="fullName" placeholder="Full Name">
+            <input type="text" id="jobTitle" placeholder="Job Title">
+            <input type="text" id="contactInfo" placeholder="Contact Information">
+            <textarea id="aboutMe" placeholder="About Me"></textarea>
+            <textarea id="experience" placeholder="Experience"></textarea>
+            <textarea id="education" placeholder="Education"></textarea>
+            <textarea id="skills" placeholder="Skills"></textarea>
+            <button id="generateCV">Generate CV</button>
+        </div>
+    </div>
+
+    <div class="cvs" id="cvsContainer"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cvBox = document.getElementById('cvBox');
+            const modal = document.getElementById('modal');
+            const closeModal = document.getElementById('closeModal');
+            const generateCV = document.getElementById('generateCV');
+            const cvsContainer = document.getElementById('cvsContainer');
+
+            cvBox.addEventListener('click', function () {
+                modal.style.display = 'flex';
+            });
+
+            closeModal.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+
+            generateCV.addEventListener('click', function () {
+                const cvData = {
+                    fullName: document.getElementById('fullName').value,
+                    jobTitle: document.getElementById('jobTitle').value,
+                    contactInfo: document.getElementById('contactInfo').value,
+                    aboutMe: document.getElementById('aboutMe').value,
+                    experience: document.getElementById('experience').value,
+                    education: document.getElementById('education').value,
+                    skills: document.getElementById('skills').value
+                };
+
+                saveCV(cvData);
+                addCVToPage(cvData);
+                modal.style.display = 'none';
+                clearModalInputs();
+            });
+
+            function saveCV(cvData) {
+                let cvs = JSON.parse(localStorage.getItem('cvs')) || [];
+                cvs.push(cvData);
+                localStorage.setItem('cvs', JSON.stringify(cvs));
+            }
+
+            function loadCVs() {
+                const cvs = JSON.parse(localStorage.getItem('cvs')) || [];
+                cvs.forEach(cv => addCVToPage(cv));
+            }
+
+            function addCVToPage(cv) {
+                const cvElement = document.createElement('div');
+                cvElement.classList.add('cv');
+                cvElement.innerHTML = `
+                    <div class="cv-header">
+                        <h2>${cv.fullName}</h2>
+                        <p>${cv.jobTitle}</p>
+                        <p>${cv.contactInfo}</p>
+                    </div>
+                    <div class="cv-section">
+                        <h3>About Me</h3>
+                        <p>${cv.aboutMe}</p>
+                    </div>
+                    <div class="cv-section">
+                        <h3>Experience</h3>
+                        <p>${cv.experience}</p>
+                    </div>
+                    <div class="cv-section">
+                        <h3>Education</h3>
+                        <p>${cv.education}</p>
+                    </div>
+                    <div class="cv-section">
+                        <h3>Skills</h3>
+                        <p>${cv.skills}</p>
+                    </div>
+                    <div class="cv-footer">
+                        <p>Generated by AI-Tech</p>
+                    </div>
+                `;
+                cvsContainer.appendChild(cvElement);
+            }
+
+            function clearModalInputs() {
+                document.getElementById('fullName').value = '';
+                document.getElementById('jobTitle').value = '';
+                document.getElementById('contactInfo').value = '';
+                document.getElementById('aboutMe').value = '';
+                document.getElementById('experience').value = '';
+                document.getElementById('education').value = '';
+                document.getElementById('skills').value = '';
+            }
+
+            loadCVs();
+        });
+    </script>
+</body>

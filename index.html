@@ -1,0 +1,2261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Advanced Menu Bar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles for Enhanced Beauty */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f0;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #ff9ecf, #ff6fb1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand:hover {
+            color: #ffe6f0;
+        }
+
+        .nav-link {
+            color: #ffccdd;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .dropdown-menu {
+            background: linear-gradient(180deg, #ff9ecf, #ff6fb1);
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-item {
+            color: #ffe6f0;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: #ff6fb1;
+            color: #fff;
+        }
+
+        .search-bar {
+            width: 300px;
+            border: 2px solid #ff6fb1;
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            transition: width 0.3s ease, border-color 0.3s ease;
+        }
+
+        .search-bar:focus {
+            width: 400px;
+            border-color: #ff9ecf;
+            outline: none;
+        }
+
+        .search-button {
+            background-color: #ff6fb1;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #ff9ecf;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .search-bar {
+                width: 100%;
+            }
+
+            .search-bar:focus {
+                width: 100%;
+            }
+
+            .navbar-brand {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tooltips</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="features.html">Services</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJuQWyFMDYv2VU5nAnEkFJM7BN-9Es8rUOhQ&s" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Image Background Remover</h3>
+            <p class="card-text">Best image background remover for free.</p>
+            <p class="price">$Free</p>
+            <a href="bgremover.html"><button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://play-lh.googleusercontent.com/GGALg4An9tryKvFUIUP2ENhU7Zd-HJP7BIP9OHcO73LndOq4R7PkeWGbktmWvTA91o0" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Image To PDF Converter</h3>
+            <p class="card-text">Select the images and convert them into pdf.</p>
+            <p class="price">$FREE</p>
+           <a href="image to pdf.html"> <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://s.smallpdf.com/static/cms/f/102628/300x180/a73f80f984/62ac088ae0f9e2098a7b.svg" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">PDF To Image Converter</h3>
+            <p class="card-text">Select the pdf and convert it into images.</p>
+            <p class="price">$FREE</p>
+           <a href="index (3).html"> <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJtrW3uuA9Co4dwchIk4eYjxHiJJmaYkqJUg&s" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">PNG To SVG Converter</h3>
+            <p class="card-text">Convert your png image into svg</p>
+            <p class="price">$FREE</p>
+           <a href="png2svg.html"> <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://quickpic.t3.gg/svg-to-png/twitter-image-1b3sq0?2dbea189046f6dc6" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">SVG To PNG Converter</h3>
+            <p class="card-text">Convert the svg into png.</p>
+            <p class="price">$FREE</p>
+           <a href="svg to png.html"> <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://www.pdf2go.com/assets/blog/How_to_Convert_Speech_to_Text.jpg" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Speech To Text Converter</h3>
+            <p class="card-text">Convert Your Speech into text by AI.</p>
+            <p class="price">$FREE</p>
+           <a href="index (16).html">  <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://i1.wp.com/creativealive.com/wp-content/uploads/2020/09/Online-Text-to-Speech-Converter.jpg?fit=620%2C349" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Text To Speech Converter</h3>
+            <p class="card-text">Convert the text into the speech.</p>
+            <p class="price">$FREE</p>
+          <a href="voicegen763.html">  <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://front-end-tools.com/ogp/en/cssGradientOgp.png" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">CSS Gradient Generator</h3>
+            <p class="card-text">Generate the css gradient and get the code.</p>
+            <p class="price">$FREE</p>
+           <a href="index (5).html"> <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2do3SL-nTIty-IPumf1iu94vm7nl3CE3oxA&s" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Web Code Editor</h3>
+            <p class="card-text">Write the code in HTML, CSS & Java AND get your code output.</p>
+            <p class="price">$FREE</p>
+          <a href="code editor modern.html">  <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://www.shutterstock.com/image-illustration/winter-holiday-greeting-card-web-260nw-1237165462.jpg" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Holidays Tracer</h3>
+            <p class="card-text">Trace the holidays for every countery.</p>
+            <p class="price">$FREE</p>
+           <a href="holiday tracer.html"> <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://www.shutterstock.com/image-vector/3d-watch-movie-search-interesting-600w-2084304952.jpg" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Movie Search</h3>
+            <p class="card-text">Search the movies description, rating and more.</p>
+            <p class="price">$FREE</p>
+          <a href="movieexplorer.html">  <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy7YKLDF5uYzte4XAEjeUGS-ddDSxvfw1eCw&s" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">OCR Text Scanner</h3>
+            <p class="card-text">Select the image and fetch the text from it</p>
+            <p class="price">$FREE</p>
+           <a href="ocrrecog.html"> <button class="btn btn-custom">Try It</button></a>
+    </div>
+</div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://cdn.prod.website-files.com/6209ea99ee1f96af1bce7bee/662a3d100dfaa8d9d2f76a0e_camera%20block.svg" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Camera</h3>
+            <p class="card-text">Take your pics.</p>
+            <p class="price">$FREE</p>
+           <a href="camera2.html"> <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_sAearAAkHK8uKo0N7BXxPYR2msyLHdr0JA&s" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">IP Geolocation</h3>
+            <p class="card-text">Get the data about any city by using its IP address.</p>
+            <p class="price">$FREE</p>
+           <a href="ipgeolocationfinder.html"> <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsZtyb9zA44AUpY2vxITT_9iDiV_dZOipKkQ&s" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Coordinate Location Finder</h3>
+            <p class="card-text">Get the coordinates for any location.</p>
+            <p class="price">$FREE</p>
+         <a href="coordinate.html">   <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4TJK-NzOyTqD3j9GoeP8q-dEb5saR46DAnA&s" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Link Preview</h3>
+            <p class="card-text">Get SEO metadata of any website by using its link.</p>
+            <p class="price">$FREE</p>
+           <a href="index (19).html"> <button class="btn btn-custom">Try It</button> </a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh9IYDOCwNKGR9mYqr5mbEvVIGNLx1q9K67w&s" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Website Screenshot Generator</h3>
+            <p class="card-text">Get the website screenshot by using its link.</p>
+            <p class="price">$FREE</p>
+           <a href="index (6).html"> <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1696501400" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Bitcoin Price Tracer</h3>
+            <p class="card-text">Real-Time Bitcoin price tracer.</p>
+            <p class="price">$FREE</p>
+          <a href="price check.html">  <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-OUkQk9bTKIDRkKfSnH4YWy20UqAX6QyaxA&s" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Image Gallery</h3>
+            <p class="card-text">Search Images.</p>
+            <p class="price">$FREE</p>
+          <a href="imggen.html">  <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjIuTHmih5FsCy7kJiHNQxsLPVsRNucTd_iQ&s" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">CV Generator</h3>
+            <p class="card-text">Generate your professional cv.</p>
+            <p class="price">$FREE</p>
+          <a href="cvgen.html">  <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+           
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://piktochart.com/wp-content/uploads/2023/03/create-a-graph-Piktochart.webp" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Graph Generator</h3>
+            <p class="card-text">Generate your graph and download it in the form of image.</p>
+            <p class="price">$FREE</p>
+          <a href="graph maker.html">  <button class="btn btn-custom">Try It</button></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Advanced Menu Bar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles for Enhanced Beauty */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f0;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #ff9ecf, #ff6fb1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand:hover {
+            color: #ffe6f0;
+        }
+
+        .nav-link {
+            color: #ffccdd;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .dropdown-menu {
+            background: linear-gradient(180deg, #ff9ecf, #ff6fb1);
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-item {
+            color: #ffe6f0;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: #ff6fb1;
+            color: #fff;
+        }
+
+        .search-bar {
+            width: 300px;
+            border: 2px solid #ff6fb1;
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            transition: width 0.3s ease, border-color 0.3s ease;
+        }
+
+        .search-bar:focus {
+            width: 400px;
+            border-color: #ff9ecf;
+            outline: none;
+        }
+
+        .search-button {
+            background-color: #ff6fb1;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #ff9ecf;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .search-bar {
+                width: 100%;
+            }
+
+            .search-bar:focus {
+                width: 100%;
+            }
+
+            .navbar-brand {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tooltips</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">About Us</a></li>
+                            <li><a class="dropdown-item" href="#">Services</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tootip Tools</title>
+    <style>
+        body {
+        }
+        header {
+            background: linear-gradient(90deg, #333, #444);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            opacity: 0.8;
+        }
+        main {
+            padding: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #222;
+        }
+        section {
+            background: #fff;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        section:hover {
+            transform: translateY(-5px);
+        }
+        section h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        section p {
+            font-size: 1rem;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: #333;
+            color: #fff;
+            margin-top: 2rem;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+  
+        <h2>Discover Our Wide Range of Tools</h2>
+
+        <section>
+            <h3>Image Background Remover</h3>
+            <p>Effortlessly remove backgrounds from your images with precision and ease. Whether you’re a designer, photographer, or just need a quick fix for personal use, our advanced tool ensures flawless results every time. Completely free and easy to use!</p>
+        </section>
+
+        <section>
+            <h3>Image To PDF Converter</h3>
+            <p>Convert your collection of images into a single, organized PDF file in seconds. Perfect for creating presentations, archiving photos, or sharing memories. Just upload your images, arrange them as you like, and download your professional-quality PDF.</p>
+        </section>
+
+        <section>
+            <h3>PDF To Image Converter</h3>
+            <p>Extract high-quality images from any PDF document. This tool is ideal for saving specific pages as images, enhancing accessibility, or preparing visual content for other platforms. Simple, fast, and entirely free.</p>
+        </section>
+
+        <section>
+            <h3>PNG To SVG Converter</h3>
+            <p>Transform your PNG files into scalable SVG graphics with this user-friendly tool. Great for web designers and developers, SVGs maintain quality at any size and are perfect for responsive designs.</p>
+        </section>
+
+        <section>
+            <h3>SVG To PNG Converter</h3>
+            <p>Need a quick conversion from SVG to PNG? This tool delivers crisp, high-resolution PNGs suitable for all your creative needs. Ideal for sharing, printing, or integrating into other projects.</p>
+        </section>
+
+        <section>
+            <h3>Speech To Text Converter</h3>
+            <p>Harness the power of AI to convert spoken words into text with unmatched accuracy. This tool is perfect for transcription, note-taking, or converting audio recordings into editable text files.</p>
+        </section>
+
+        <section>
+            <h3>Text To Speech Converter</h3>
+            <p>Convert written text into natural-sounding speech. Choose from various voices and languages to enhance accessibility or create engaging audio content for your audience.</p>
+        </section>
+
+        <section>
+            <h3>CSS Gradient Generator</h3>
+            <p>Create stunning gradients for your web designs with ease. Select your colors, adjust the gradient type, and copy the CSS code directly to your clipboard for immediate use.</p>
+        </section>
+
+        <section>
+            <h3>Web Code Editor</h3>
+            <p>Write, edit, and preview HTML, CSS, and JavaScript code in a real-time environment. Perfect for students, developers, and hobbyists looking to test ideas quickly and efficiently.</p>
+        </section>
+
+        <section>
+            <h3>Holidays Tracer</h3>
+            <p>Stay informed about holidays worldwide. This tool provides detailed holiday calendars for every country, making it easy to plan your trips or coordinate events.</p>
+        </section>
+
+        <section>
+            <h3>Movie Search</h3>
+            <p>Find detailed information about movies, including synopses, ratings, cast, and more. This tool is perfect for cinephiles and anyone looking for their next favorite film.</p>
+        </section>
+
+        <section>
+            <h3>OCR Text Scanner</h3>
+            <p>Extract text from images with this powerful OCR tool. Convert scanned documents, handwritten notes, or images into editable text in just a few clicks.</p>
+        </section>
+
+        <section>
+            <h3>Camera</h3>
+            <p>Take high-quality pictures directly from your device using our camera tool. Perfect for quick captures or professional shots.</p>
+        </section>
+
+        <section>
+            <h3>IP Geolocation</h3>
+            <p>Get detailed information about any location using its IP address. This tool is ideal for cybersecurity, marketing, and research purposes.</p>
+        </section>
+
+        <section>
+            <h3>Coordinate Location Finder</h3>
+            <p>Find the exact geographic coordinates of any location. This tool is perfect for navigation, mapping, and research projects.</p>
+        </section>
+
+        <section>
+            <h3>Link Preview</h3>
+            <p>Retrieve SEO metadata and preview any website’s details by entering its link. Ideal for digital marketers and content creators.</p>
+        </section>
+
+        <section>
+            <h3>Website Screenshot Generator</h3>
+            <p>Capture full-page screenshots of any website instantly. This tool is perfect for reporting, presentations, or archiving web pages.</p>
+        </section>
+
+        <section>
+            <h3>Bitcoin Price Tracer</h3>
+            <p>Track real-time Bitcoin prices and stay updated on market trends. A must-have tool for cryptocurrency enthusiasts and traders.</p>
+        </section>
+
+        <section>
+            <h3>Image Gallery</h3>
+            <p>Explore a vast collection of images with our advanced search tool. Perfect for finding inspiration or sourcing images for your projects.</p>
+        </section>
+
+        <section>
+            <h3>CV Generator</h3>
+            <p>Create a professional CV with ease. Customize templates, add your details, and download your CV instantly. Perfect for job seekers at any stage of their careers.</p>
+        </section>
+
+        <section>
+            <h3>Graph Generator</h3>
+            <p>Design and download professional graphs in image format. Perfect for presentations, data analysis, or visual storytelling.</p>
+        </section>
+    </main>
+    
+</body>
+</html>

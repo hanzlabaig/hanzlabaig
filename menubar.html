@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #ffe6f7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.5);
+            overflow: hidden;
+            background: white;
+            width: 350px;
+        }
+
+        .card img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #ff1493, #ff69b4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://via.placeholder.com/350x200" alt="Product Image">
+        <div class="card-body">
+            <h3 class="card-title">Product Name</h3>
+            <p class="card-text">This is a short description of the product that highlights its features and benefits.</p>
+            <p class="price">$99.99</p>
+            <button class="btn btn-custom">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

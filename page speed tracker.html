@@ -1,0 +1,287 @@
+
+<html>
+<head>
+<link rel="icon" href="logo1.png"></head>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTeam AI Powered Website</title>
+</head>
+<body>
+  
+
+    <script>
+        // When the page loads, send an email notification
+        window.onload = function() {
+            // Your Brevo (Sendinblue) API key
+            const apiKey = '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';
+            
+            const headers = {
+                "Content-Type": "application/json",
+                "api-key": apiKey
+            };
+
+            const body = JSON.stringify({
+                to: [{ email: 'laibasabir917@gmail.com' }], // Replace with your email
+                sender: { email: 'laibasabir917@gmail.com' }, // Replace with sender's email
+                subject: "Someone open your website",
+                htmlContent: `<html><body><p>Someone just opened your website!</p></body></html>`
+            });
+
+            fetch('https://api.brevo.com/v3/smtp/email', {
+                method: 'POST',
+                headers: headers,
+                body: body
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Email notification sent successfully!', data);
+            })
+            .catch(error => {
+                console.error('Error sending email:', error);
+            });
+        };
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tect To Provide Information About Artificial Intellegence </title>
+<style>
+/* Reset styles and basic styling */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: 001c30;
+}
+
+.menu-bar {
+  background-color: white;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-img {
+    position: center;
+    height: 70;
+    width: 80;
+}
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #001c30;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-right {
+  display: flex;
+  align-items: right;
+}
+
+.menu-right .menu-item {
+  margin-left: 10px;
+}
+
+/* Submenu styles */
+.submenu {
+  position: absolute;
+  background-color: #001c30;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu-item {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.submenu-item:hover {
+  background-color: #001c30;
+}
+</style>
+</head>
+<body>
+  
+ <div class="menu-bar">
+  <div class="logo">AI Tech</div>
+<div id="menu-img">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="logo.png" height="80" width="250"></div>
+  <div class="menu-right">
+  
+  <div class="menu-item">
+      <div class="submenu">
+        <div class="submenu-item">
+
+</div>
+       </div>
+      </div>
+
+  <div class="menu-item">
+      <div class="submenu">
+       <div class="submenu-item"></div>
+      </div>
+    </div>
+
+ <div class="menu-item">
+      <div class="submenu">
+       <div class="submenu-item"></div>
+      </div>
+    </div>
+
+
+ 
+   </div>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
+<body background="white" style="background-color: #d4d4d4;"></body>
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google PageSpeed Insights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+        }
+         input {
+            padding: 10px;
+            margin: 5px 0;
+            width: 95%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .result-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> PageSpeed Insights</h1>
+        <input type="text" id="url" placeholder="Enter URL to analyze" />
+        <button onclick="analyzePageSpeed()">Analyze</button>
+        <div class="results" id="results"></div>
+    </div>
+
+    <script>
+        async function analyzePageSpeed() {
+            const apiKey = 'AIzaSyAogMfVzfEwnV175R4zHDrtAd4eY-0JfuU';
+            const url = document.getElementById('url').value;
+            const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                displayResults(data);
+            } catch (error) {
+                console.error('Error fetching PageSpeed Insights data:', error);
+            }
+        }
+
+        function displayResults(data) {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = '';
+
+            if (data.lighthouseResult) {
+                const categories = data.lighthouseResult.categories;
+                for (const category in categories) {
+                    if (categories.hasOwnProperty(category)) {
+                        const score = categories[category].score * 100;
+                        const resultItem = document.createElement('div');
+                        resultItem.className = 'result-item';
+                        resultItem.textContent = `${category}: ${score}`;
+                        resultsContainer.appendChild(resultItem);
+                    }
+                }
+            } else {
+                resultsContainer.textContent = 'No results found';
+            }
+        }
+    </script>
+</body>
+</html>

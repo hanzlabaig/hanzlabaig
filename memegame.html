@@ -1,0 +1,309 @@
+
+<html>
+<head>
+<link rel="icon" href="logo1.png"></head>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevTeam To Provide Information About Artificial Intellegence </title>
+<style>
+/* Reset styles and basic styling */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: 001c30;
+}
+
+.menu-bar {
+  background-color: white;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-img {
+    position: center;
+    height: 70;
+    width: 80;
+}
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #001c30;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-right {
+  display: flex;
+  align-items: right;
+}
+
+.menu-right .menu-item {
+  margin-left: 10px;
+}
+
+/* Submenu styles */
+.submenu {
+  position: absolute;
+  background-color: #001c30;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu-item {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.submenu-item:hover {
+  background-color: #001c30;
+}
+</style>
+</head>
+<body>
+  
+ <div class="menu-bar">
+  <div class="logo">AI Tech</div>
+<div id="menu-img">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="logo.png" height="80" width="250"></div>
+  <div class="menu-right">
+  
+  <div class="menu-item">
+      <div class="submenu">
+        <div class="submenu-item">
+
+</div>
+       </div>
+      </div>
+
+  <div class="menu-item">
+      <div class="submenu">
+       <div class="submenu-item"></div>
+      </div>
+    </div>
+
+ <div class="menu-item">
+      <div class="submenu">
+       <div class="submenu-item"></div>
+      </div>
+    </div>
+
+
+ 
+   </div>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
+<body background="white" style="background-color: #d4d4d4;"></body>
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Matching Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-gap: 10px;
+            margin-bottom: 20px;
+        }
+        .card {
+            width: 100px;
+            height: 100px;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 5px;
+            position: relative;
+            user-select: none;
+        }
+        .card.flipped {
+            background-color: white;
+            color: black;
+        }
+        .card.matched {
+            background-color: #28a745;
+            pointer-events: none;
+        }
+        .info {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Memory Matching Game</h1>
+    <div class="info">
+        <p>Attempts: <span id="attempts">0</span></p>
+        <p>Time: <span id="timer">0</span> seconds</p>
+    </div>
+    <div class="game-board" id="game-board"></div>
+    <script>
+        const symbols = ['🍎', '🍌', '🍇', '🍉', '🍊', '🍓', '🍒', '🍍'];
+        let cards = [...symbols, ...symbols]; // Duplicate symbols for pairs
+        let attempts = 0;
+        let firstCard = null;
+        let secondCard = null;
+        let timerInterval;
+        let seconds = 0;
+
+        // Shuffle cards
+        cards.sort(() => 0.5 - Math.random());
+
+        const board = document.getElementById('game-board');
+        const attemptsDisplay = document.getElementById('attempts');
+        const timerDisplay = document.getElementById('timer');
+
+        // Create card elements
+        cards.forEach(symbol => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.dataset.symbol = symbol;
+            card.innerText = ''; // Initially, cards are faced down
+            card.addEventListener('click', flipCard);
+            board.appendChild(card);
+        });
+
+        function flipCard() {
+            if (this.classList.contains('flipped') || secondCard) return; // Prevent flipping if already flipped or if two cards are flipped
+
+            this.classList.add('flipped');
+            this.innerText = this.dataset.symbol;
+
+            if (!firstCard) {
+                firstCard = this;
+            } else {
+                secondCard = this;
+                attempts++;
+                attemptsDisplay.innerText = attempts;
+                checkForMatch();
+            }
+        }
+
+        function checkForMatch() {
+            if (firstCard.dataset.symbol === secondCard.dataset.symbol) {
+                firstCard.classList.add('matched');
+                secondCard.classList.add('matched');
+                resetCards();
+                checkForWin();
+            } else {
+                setTimeout(() => {
+                    firstCard.classList.remove('flipped');
+                    firstCard.innerText = '';
+                    secondCard.classList.remove('flipped');
+                    secondCard.innerText = '';
+                    resetCards();
+                }, 1000);
+            }
+        }
+
+        function resetCards() {
+            firstCard = null;
+            secondCard = null;
+        }
+
+        function checkForWin() {
+            const matchedCards = document.querySelectorAll('.matched');
+            if (matchedCards.length === cards.length) {
+                clearInterval(timerInterval);
+                alert(`Congratulations! You've completed the game in ${seconds} seconds with ${attempts} attempts!`);
+            }
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                seconds++;
+                timerDisplay.innerText = seconds;
+            }, 1000);
+        }
+
+        // Start the timer when the game starts
+        startTimer();
+    </script>
+</body>
+</html>

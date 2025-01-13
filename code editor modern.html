@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Advanced Menu Bar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles for Enhanced Beauty */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f0;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #ff9ecf, #ff6fb1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand:hover {
+            color: #ffe6f0;
+        }
+
+        .nav-link {
+            color: #ffccdd;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .dropdown-menu {
+            background: linear-gradient(180deg, #ff9ecf, #ff6fb1);
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-item {
+            color: #ffe6f0;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: #ff6fb1;
+            color: #fff;
+        }
+
+        .search-bar {
+            width: 300px;
+            border: 2px solid #ff6fb1;
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            transition: width 0.3s ease, border-color 0.3s ease;
+        }
+
+        .search-bar:focus {
+            width: 400px;
+            border-color: #ff9ecf;
+            outline: none;
+        }
+
+        .search-button {
+            background-color: #ff6fb1;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #ff9ecf;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .search-bar {
+                width: 100%;
+            }
+
+            .search-bar:focus {
+                width: 100%;
+            }
+
+            .navbar-brand {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tooltips</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">About Us</a></li>
+                            <li><a class="dropdown-item" href="#">Services</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br><center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Code Editor</title>
+    <style>
+        body {
+           
+        }
+
+        .editor-container {
+            width: 90%;
+            height: 60%;
+            display: flex;
+            down: 90%;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .tabs {
+            display: flex;
+            background: #333;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            background: #444;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.9s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .tab-button.active::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #f06;
+            border-radius: 2px;
+        }
+
+        .tab-button:hover {
+            background: #555;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .editors {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .editor {
+            flex: 1;
+            padding: 20px;
+            border: none;
+            background: #222;
+            color: #ddd;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            resize: none;
+            display: none;
+            border-bottom: 1px solid #444;
+            transition: opacity 0.3s ease;
+        }
+
+        .editor.show {
+            display: block;
+        }
+
+        .output {
+            flex: 1;
+            padding: 20px;
+            border-top: 1px solid #444;
+            background: #000;
+            overflow: hidden;
+            color: white;
+        }
+
+        #output-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            color: white;
+            border-radius: 10px;
+        }
+
+        button.toggle-theme {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #f06;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        button.toggle-theme:hover {
+            background: #d05;
+            transform: scale(1.05);
+        }
+
+        .dark-mode {
+            background: #222;
+            color: #eee;
+        }
+
+        .dark-mode .editor-container {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .dark-mode .tab-button {
+            background: #333;
+        }
+
+        .dark-mode .tab-button.active::before {
+            background: #0f0;
+        }
+
+        .dark-mode .output {
+            background: #111;
+        }
+    </style>
+</head>
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>
+&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>
+<body>
+
+
+    <div class="editor-container">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="html">HTML</button>
+            <button class="tab-button" data-tab="css">CSS</button>
+            <button class="tab-button" data-tab="js">JavaScript</button>
+        </div>
+        <div class="editors">
+            <textarea id="html-editor" class="editor" placeholder="Write HTML code here..."></textarea>
+            <textarea id="css-editor" class="editor" placeholder="Write CSS code here..."></textarea>
+            <textarea id="js-editor" class="editor" placeholder="Write JavaScript code here..."></textarea>
+        </div>
+        <div class="output">
+            <iframe id="output-frame"></iframe>
+        </div>
+        <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+<br>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const editors = document.querySelectorAll('.editor');
+            const outputFrame = document.getElementById('output-frame');
+
+            function updatePreview() {
+                const html = document.getElementById('html-editor').value;
+                const css = `<style>${document.getElementById('css-editor').value}</style>`;
+                const js = `<script>${document.getElementById('js-editor').value}<\/script>`;
+                const code = `${html}${css}${js}`;
+                outputFrame.srcdoc = code;
+            }
+
+            function showEditor(tab) {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                document.querySelector(`.tab-button[data-tab="${tab}"]`).classList.add('active');
+                editors.forEach(editor => editor.classList.remove('show'));
+                document.getElementById(`${tab}-editor`).classList.add('show');
+            }
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    showEditor(e.target.dataset.tab);
+                });
+            });
+
+            editors.forEach(editor => {
+                editor.addEventListener('input', updatePreview);
+            });
+
+            // Set default tab
+            showEditor('html');
+        });
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>

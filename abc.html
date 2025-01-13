@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProDev - Professional Developers Community</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        nav .logo a {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #5a67d8;
+        }
+
+        .auth-buttons a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .auth-buttons a:hover {
+            color: #5a67d8;
+        }
+
+        .auth-buttons .signup {
+            border: 2px solid white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .auth-buttons .signup:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        .search-bar {
+            margin: 20px auto;
+            max-width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-bar input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+            font-size: 16px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #5a67d8;
+            color: white;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-bar button:hover {
+            background-color: #3f51b5;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .featured-posts, .recent-posts {
+            margin: 40px 0;
+        }
+
+        .featured-posts h2, .recent-posts h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            border-left: 4px solid #5a67d8;
+            padding-left: 10px;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .post {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .post h3 a {
+            color: #333;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .post h3 a:hover {
+            color: #5a67d8;
+        }
+
+        .post p {
+            margin-top: 10px;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .post .tags {
+            margin-top: 10px;
+        }
+
+        .post .tags span {
+            background-color: #5a67d8;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+        .post .comments-count {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #5a67d8;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: 12px;
+        }
+
+        .comments-section {
+            margin-top: 40px;
+        }
+
+        .comments-section h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .comments-section .comment {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .comments-section .comment .user {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .comments-section .comment p {
+            margin: 0;
+            color: #666;
+        }
+
+        .social-share {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .social-share button {
+            background-color: #3b5998;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .social-share button:hover {
+            background-color: #2d4373;
+        }
+
+        .dashboard {
+            margin-top: 40px;
+        }
+
+        .dashboard h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .dashboard .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard .stats .stat {
+            text-align: center;
+        }
+
+        .dashboard .stats .stat h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .dashboard .stats .stat p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .footer-content {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-top: 4px solid #5a67d8;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-content ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer-content ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-content ul li a:hover {
+            color: #5a67d8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">ProDev</a></div>
+            <ul>
+                
+            </ul>
+            <div class="auth-buttons">
+                <a href="subscribe.html" class="signup">Subscribe</a>
+                 <a href="quiz.html" class="signup">Quiz</a>
+                <a href="portfolio.html" class="signup">Developers</a>
+                <a href="send article.html" class="signup">Submit Articles</a>
+            </div>
+        </nav>
+    </header>
+<search><form method="get" action="index.html">
+    <div class="search-bar">
+        <input type="text" placeholder="Search articles, tutorials, and more...">
+        <button>Search</button>
+    </div>
+</search></form>
+    <main>
+        <section class="hero">
+            <h1>Welcome to ProDev</h1>
+            <p>Your go-to platform for developers, by developers. Share knowledge, learn new skills, and grow your professional network.</p>
+        </section>
+
+        <section class="featured-posts">
+            <h2>Featured Posts</h2>
+            <div class="posts-grid">
+                <!-- Featured Posts -->
+              <!--  <div class="post">
+                    <h3><a href="free api.html">Understanding the Deep Learning</a></h3>
+                    <p>A comprehensive guide to Deep Learning</p>
+                    <div class="tags">
+                        <span>#AI</span>
+                        <span>#DL</span>
+                    </div>
+                    <div class="comments-count">10</div>
+                </div>
+                    <div class="post">
+                    <h3><a href="node post.html">Mastering Node.js & Express.js</a></h3>
+                    <p>A comprehensive guide to Node.js & Express.js.</p>
+                    <div class="tags">
+                        <span>#Node.js</span>
+                        <span>#Express.js</span>
+                    </div>
+                    <div class="comments-count">5</div>
+                </div>
+                  <div class="post">
+                    <h3><a href="rest api make.html">REST APIs by Node.js & Express.js</a></h3>
+                    <p>A comprehensive guide to REST APIs</p>
+                    <div class="tags">
+                        <span>#API</span>
+                        <span>#Node.js</span>
+                        <span>#Express.js</span>
+                    </div>
+                    <div class="comments-count"><></div>
+                </div>
+                </div> -->
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev.to All Posts Viewer</title>
+    <style>
+  
+       
+        /* Post Container */
+        .post-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px auto;
+            padding: 10px;
+            max-width: 1400px;
+        }
+
+        /* Post Card */
+        .post-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            width: 350px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .post-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 15px;
+        }
+
+        .post-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0 0 10px;
+            color: #004d40;
+        }
+
+        .post-meta {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .post-description {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-actions a {
+            text-decoration: none;
+            background: #00796b;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .post-actions a:hover {
+            background: #004d40;
+        }
+
+        .post-stats {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .loading {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #00796b;
+        }
+    </style>
+</head>
+<body>
+  
+    <!-- Loading Message -->
+    <div class="loading" id="loading">Loading all posts, please wait...</div>
+
+    <!-- Post Container -->
+    <div class="post-container" id="postContainer"></div>
+
+    <!-- JavaScript -->
+    <script>
+        const postContainer = document.getElementById("postContainer");
+        const loading = document.getElementById("loading");
+        const username = "hanzla-baig"; // Replace with your Dev.to username
+
+        // Fetch All Posts with Pagination
+        async function fetchAllPosts() {
+            let allPosts = [];
+            let page = 1;
+            let perPage = 30;
+            let isMorePosts = true;
+
+            try {
+                while (isMorePosts) {
+                    const response = await fetch(`https://dev.to/api/articles?username=${username}&page=${page}&per_page=${perPage}`);
+                    if (!response.ok) throw new Error("Failed to fetch posts.");
+
+                    const posts = await response.json();
+                    if (posts.length < perPage) isMorePosts = false; // Last page reached
+                    else page++;
+
+                    allPosts = [...allPosts, ...posts]; // Append posts to the array
+                }
+
+                displayPosts(allPosts);
+                loading.style.display = "none";
+            } catch (error) {
+                console.error("Error fetching posts:", error);
+                loading.textContent = "Error fetching posts. Please try again later.";
+            }
+        }
+
+        // Display All Posts
+        function displayPosts(posts) {
+            if (posts.length === 0) {
+                postContainer.innerHTML = `<p style="text-align:center; font-size:1.2rem;">No posts found for this username.</p>`;
+                return;
+            }
+
+            posts.forEach(post => {
+                const postCard = document.createElement("div");
+                postCard.classList.add("post-card");
+
+                postCard.innerHTML = `
+                    <img src="${post.cover_image || 'https://via.placeholder.com/350x180'}" alt="Post Image">
+                    <div class="post-content">
+                        <div class="post-title">${post.title}</div>
+                        <div class="post-meta">
+                            Published on: ${new Date(post.published_at).toLocaleDateString()} 
+                            | Author: ${post.user.name || "Unknown"}
+                        </div>
+                        <div class="post-description">${post.description || "No description available."}</div>
+                        <div class="post-actions">
+                            <div class="post-stats">
+                                👍 ${post.positive_reactions_count} Likes | 👁️ ${post.public_reactions_count} Views 
+                                | 📖 ${post.reading_time_minutes} Min Read
+                            </div>
+                            <a href="${post.url}" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                `;
+
+                postContainer.appendChild(postCard);
+            });
+        }
+
+        // Initialize Fetch
+        fetchAllPosts();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+        <section class="comments-section">
+            <h3>Recent Comments</h3>
+
+              <div class="comment">
+                <div class="user">Ahsan</div>
+                <p>How we can create the REST APIs Keys by using Express.js or by using anything else?</p>
+            </div>
+            <div class="comment">
+                <div class="user">James</div>
+                <p>This article on Deep Learning is great. Thanks for sharing!</p>
+            </div>
+            <div class="comment">
+                <div class="user">Harry</div>
+                <p>Great insights on Node.js & Express.js.</p>
+            </div>
+                 <div class="comment">
+                <div class="user">Vilad</div>
+                <p>I wants the the information about the free APIs.</p>
+            </div>
+        </section>
+
+        <section class="social-share">
+            <!use button tag here >
+        </section>
+
+        <section class="dashboard">
+            <h2>User Analytics</h2>
+            <div class="stats">
+                <div class="stat">
+                    <h3>28,913</h3>
+                    <p>Post Views</p>
+                </div>
+                <div class="stat">
+                    <h3>180</h3>
+                    <p>Comments</p>
+                </div>
+                <div class="stat">
+                    <h3>1500</h3>
+                    <p>Likes</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 ProDev. All rights reserved.</p>
+            <ul>
+                <li><a href="https://dev.to/hanzla-baig">Hanzla Baig</a></li>
+                <li><a href="https://dev.to/prodevstaff"></a>ProDev Staff</li>
+                <li><a href="news.html"></a>Global News</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

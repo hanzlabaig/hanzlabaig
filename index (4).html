@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate CSS Gradient Generator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .gradient-preview {
+            height: 300px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+        .control-panel {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        .color-stop-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .color-stop-row input {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        .color-stop-row .btn-remove {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <h1 class="text-center mb-4">Ultimate CSS Gradient Generator</h1>
+    <div id="gradient-preview" class="gradient-preview"></div>
+    <div class="control-panel">
+        <div class="mb-3">
+            <label for="gradient-type" class="form-label">Gradient Type</label>
+            <select id="gradient-type" class="form-select">
+                <option value="linear-gradient">Linear</option>
+                <option value="radial-gradient">Radial</option>
+                <option value="conic-gradient">Conic</option>
+            </select>
+        </div>
+        <div id="color-stops" class="mb-3">
+            <div class="color-stop-row">
+                <input type="color" class="form-control form-control-color" value="#ff0000">
+                <button class="btn btn-remove"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="color-stop-row">
+                <input type="color" class="form-control form-control-color" value="#0000ff">
+                <button class="btn btn-remove"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="mb-3 text-end">
+            <button class="btn btn-custom" id="add-color-stop"><i class="fas fa-plus"></i> Add Color Stop</button>
+        </div>
+        <div class="mb-3">
+            <label for="angle" class="form-label">Angle (Linear Gradient only)</label>
+            <input type="range" id="angle" class="form-range" min="0" max="360" value="90">
+            <small class="form-text text-muted">Current Angle: <span id="angle-value">90</span>°</small>
+        </div>
+        <div class="text-end">
+            <button class="btn btn-custom" id="copy-css"><i class="fas fa-copy"></i> Copy CSS</button>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function() {
+        function updateGradient() {
+            const type = $('#gradient-type').val();
+            const colors = [];
+            $('#color-stops input[type="color"]').each(function() {
+                colors.push($(this).val());
+            });
+            const angle = $('#angle').val();
+            let gradient = `${type}(${type === 'linear-gradient' ? angle + 'deg, ' : ''}${colors.join(', ')})`;
+            $('#gradient-preview').css('background', gradient);
+        }
+
+        function addColorStop() {
+            const newColorStop = `
+                <div class="color-stop-row">
+                    <input type="color" class="form-control form-control-color" value="#ffffff">
+                    <button class="btn btn-remove"><i class="fas fa-times"></i></button>
+                </div>`;
+            $('#color-stops').append(newColorStop);
+        }
+
+        function copyToClipboard() {
+            const type = $('#gradient-type').val();
+            const colors = [];
+            $('#color-stops input[type="color"]').each(function() {
+                colors.push($(this).val());
+            });
+            const angle = $('#angle').val();
+            const gradient = `${type}(${type === 'linear-gradient' ? angle + 'deg, ' : ''}${colors.join(', ')})`;
+            navigator.clipboard.writeText(`background: ${gradient};`).then(() => {
+                alert('CSS copied to clipboard!');
+            });
+        }
+
+        $(document).on('input', 'input[type="color"], #angle', function() {
+            updateGradient();
+            $('#angle-value').text($('#angle').val());
+        });
+
+        $(document).on('click', '#add-color-stop', addColorStop);
+        $(document).on('click', '.btn-remove', function() {
+            $(this).closest('.color-stop-row').remove();
+            updateGradient();
+        });
+
+        $(document).on('click', '#copy-css', copyToClipboard);
+
+        updateGradient(); // Initialize preview
+    });
+</script>
+
+</body>
+</html>

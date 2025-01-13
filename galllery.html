@@ -1,0 +1,314 @@
+
+<html>
+<head>
+<link rel="icon" href="logo1.png"></head>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevTeam To Provide Information About Artificial Intellegence </title>
+<style>
+/* Reset styles and basic styling */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: 001c30;
+}
+
+.menu-bar {
+  background-color: white;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-img {
+    position: center;
+    height: 70;
+    width: 80;
+}
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #001c30;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-right {
+  display: flex;
+  align-items: right;
+}
+
+.menu-right .menu-item {
+  margin-left: 10px;
+}
+
+/* Submenu styles */
+.submenu {
+  position: absolute;
+  background-color: #001c30;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu-item {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.submenu-item:hover {
+  background-color: #001c30;
+}
+</style>
+</head>
+<body>
+  
+ <div class="menu-bar">
+  <div class="logo"></div>
+<div id="menu-img">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="logo.png" height="80" width="250"></div>
+  <div class="menu-right">
+  
+  <div class="menu-item">
+      <div class="submenu">
+        <div class="submenu-item">
+
+</div>
+       </div>
+      </div>
+
+  <div class="menu-item">
+      <div class="submenu">
+       <div class="submenu-item"></div>
+      </div>
+    </div>
+
+ <div class="menu-item">
+      <div class="submenu">
+       <div class="submenu-item"></div>
+      </div>
+    </div>
+
+
+ 
+   </div>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
+<body background="white" style="background-color: #d4d4d4;"></body>
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Image and Video Fetcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 4px;
+            margin-left: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+
+        .results {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .result-item {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            width: 200px;
+            overflow: hidden;
+        }
+
+        .result-item img,
+        .result-item video {
+            max-width: 100%;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .result-item:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> DevTeam Gallery</h1>
+        <div class="search-bar">
+            <input type="text" id="search-query" placeholder="Search for images or videos">
+            <button onclick="fetchData()">Search</button>
+        </div>
+        <div class="results" id="results"></div>
+    </div>
+    <footer>
+        Powered by DevTeam
+    </footer>
+    <script>
+        const API_KEY = 'SwG9zZt07KgrFvOMUUkdWex8F6KLxQtZFqsFWww8CwBA6BVyfuAl7bdu';
+
+        async function fetchData() {
+            const query = document.getElementById('search-query').value;
+            const imagesUrl = `https://api.pexels.com/v1/search?query=${query}&per_page=15`;
+            const videosUrl = `https://api.pexels.com/videos/search?query=${query}&per_page=15`;
+
+            const headers = {
+                Authorization: API_KEY
+            };
+
+            try {
+                const [imagesResponse, videosResponse] = await Promise.all([
+                    fetch(imagesUrl, { headers }),
+                    fetch(videosUrl, { headers })
+                ]);
+
+                const imagesData = await imagesResponse.json();
+                const videosData = await videosResponse.json();
+
+                displayResults(imagesData.photos, videosData.videos);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        function displayResults(images, videos) {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = '';
+
+            images.forEach(image => {
+                const imgElement = document.createElement('img');
+                imgElement.src = image.src.medium;
+                const imgContainer = document.createElement('div');
+                imgContainer.className = 'result-item';
+                imgContainer.appendChild(imgElement);
+                resultsContainer.appendChild(imgContainer);
+            });
+
+            videos.forEach(video => {
+                const videoElement = document.createElement('video');
+                videoElement.src = video.video_files[0].link;
+                videoElement.controls = true;
+                const videoContainer = document.createElement('div');
+                videoContainer.className = 'result-item';
+                videoContainer.appendChild(videoElement);
+                resultsContainer.appendChild(videoContainer);
+            });
+        }
+    </script>
+</body>
+</html>
